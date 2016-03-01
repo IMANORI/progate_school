@@ -1,0 +1,9 @@
+$(function() {
+ 
+    //ページ内スクロール
+    $(".header-right li").click(function () {
+        var i = $(".header-right li").index(this)
+        var p = $(".section-title").eq(i).offset().top;
+        $('html,body').animate({ scrollTop: p }, 'fast');
+        return false;
+    });
