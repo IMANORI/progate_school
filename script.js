@@ -10,12 +10,13 @@ $(function() {
 $('.btn-top-white').click(function(){
   
   if(('#read-more').hasClass('open')){
-   $('#detail').slideUp();
-   $('#read-more').removeClass().text("もっと詳しく");
+   $('#detail').fadeOut();
+   $('#read-more').removeClass('open').text("もっと詳しく");
 
 } else {
-	$('#read-more').addClass('open').slideDown();
-	$('#read-more').text("閉じる");
+	$('#read-more').addClass('open').text("閉じる");
+	$('#detail').fadeIn();
+	
 }
 });
 
