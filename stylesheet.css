@@ -142,6 +142,7 @@ header {
   border: 1px solid rgba(250, 250, 250, 0.15);
   color: rgba(250, 250, 250, 0.9);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .btn-top-white:hover {
@@ -149,6 +150,14 @@ header {
   border: 1px solid rgba(250, 250, 250, 0.8);
   color: #fff;
   box-shadow: 0 0 12px rgba(250, 250, 250, 0.15);
+  border-radius: 3px;
+}
+
+#detail {
+ display: none;
+}
+.detail-active {
+  
 }
 /*-------  ここまでtop content  --------*/
 
@@ -169,6 +178,7 @@ header {
   width: 38%;
   padding: 20px;
   vertical-align: top;
+  height: 200px;
 }
 .text-active {
   display: none;
