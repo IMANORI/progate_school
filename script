@@ -9,18 +9,14 @@ $(function() {
 
 
 
-//学習する言語hover
-
-
-$('.language-box p').hover(
-   
-   function(){
-    $(this).find('.language-box p').fadeIn();
-   },
-   function(){
-    $(this).find('.language-box p').fadeOut();
-});
+//学習する言語
 	
-
+$('.language-box').hover(function() {
+      $(this).find('.text-active').addClass('active');
+    },
+    function() {
+      $(this).find('.text-active').removeClass('active');
+    }
+  );
 
 });
