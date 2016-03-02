@@ -1,9 +1,26 @@
 $(function() {
  
-// スクロール
-    $('header a').click(function(){
-    $("html,body").animate({scrollTop:$($(this).attr('href')).offset().top},);
-    return false;
-  });
+// スクロール難しい
+
+
+
+
+//
+
+
+
+//学習する言語hover
+
+
+$('.language-box p').hover(
+   
+   function(){
+    $(this).find('.language-box p').fadeIn();
+   },
+   function(){
+    $(this).find('.language-box p').fadeOut();
+});
+	
+
 
 });

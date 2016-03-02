@@ -170,6 +170,11 @@ header {
   padding: 20px;
   vertical-align: top;
 }
+.language-box p {
+  display: none;
+}
+
+
 /*features*/
 .features-section-top {
   text-align: center;
