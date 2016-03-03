@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--スライダー -->
+    <link href="jquery.bxslider.css" rel="stylesheet" />
+    
+    <!-- スライダー -->
+    
   </head>
   <body>
     <!-- ここから書き始めてください -->
@@ -177,24 +182,34 @@
       <div class="section-title">
         <h3>メンター紹介</h3>
       </div>
+    
+    <div class="bxslider">
       
-      <div class="mentor-box">
+      <div class="slide">
+       <div class="mentor-box">
         <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_1.jpg">
         <h4>プログラミングサークルでの活動や受託を通じてスキルを磨く。その後は複数のスタートアップに協力しながらプログラミングを教えるようになり、これをオンラインのサービスとして提供したいと思い、2014年7月に株式会社Progateを創業、現代表取締役。</h4>
         <p>-加藤将倫</p>
+       </div>
       </div>
-      
-      <div class="mentor-box">
+
+      <div class="slide">
+       <div class="mentor-box">
         <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_2.jpg">
         <h4>３年生の秋にエンジニアを集めるために東大プログラミングサークル「ZEROXONE」をたちあげる。自分の人生はプログラミングを身につけたことによって劇的に変わりました。みんなにも同じ体験をしてもらいたくてProgateを作っています！</h4>
         <p>-村井謙太</p>
+       </div>
       </div>
-      
-      <div class="mentor-box">
+
+      <div class="slide">
+       <div class="mentor-box">
         <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_3.jpg">
         <h4>ProgateではUI/UXを担当。ユーザーに夢中で楽しんでもらえるようなサービス設計、学びによって人生を豊かにできるようなサービスを目指し、日々プロダクト改善に取り組んでいる。テクノロジー・デザイン・ビジネスの分野で、領域横断的に活動し、人々がワクワクして止まないモノを生み出せる人間で在りたいと思う。</h4>
         <p>-神田美智</p>
+       </div>
       </div>
+
+    </div>
       
     </div>
   </div><!--mentors-section-->
@@ -228,7 +243,7 @@
       <div class="column-box column">
         <a href="#" class="caption">
           <div class="caption-defaultWrap">
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/programmer.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/programmer.jpg">
           </div>
         </a>
         <a href="#" class="column-title">20代のエンジニアが初めての転職でつまずきやすい点</a>
@@ -238,7 +253,7 @@
       <div class="column-box tip">
         <a href="#" >
           <div>
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/html5.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/html5.jpg">
           </div>
         </a>
         <a href="#" class="column-title">HTML5の新タグについて</a>
@@ -248,7 +263,7 @@
       <div class="column-box tip">
         <a href="#">
           <div>
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/js.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/js.jpg">
           </div>
         </a>
         <a href="#" class="column-title">Javascriptの文法のまとめ</a>
@@ -258,7 +273,7 @@
       <div class="column-box column">
         <a href="#">
           <div>
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/books.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/books.jpg">
           </div>
         </a>
         <a href="#" class="column-title">新卒ソフトウェアエンジニアのための技術書100冊</a>
@@ -268,7 +283,7 @@
       <div class="column-box column">
         <a href="#">
           <div>
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/engineer.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/engineer.jpg">
           </div>
         </a>
         <a href="#" class="column-title">「プレイヤーでも年収1000万円に」エンジニアの評価制度</a>
@@ -278,7 +293,7 @@
       <div class="column-box tip">
         <a href="#">
           <div>
-            <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/inspect.jpg">
+            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/inspect.jpg">
           </div>
         </a>
         <a href="#" class="column-title">要素の検証をしてみよう</a>
@@ -349,5 +364,22 @@
 
 
 <script type="text/javascript" src="script.js"></script>
+
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="jquery.bxslider.min.js"></script>
+     <script type="text/javascript">
+    
+        $(document).ready(function(){
+         $('.bxSlider').bxSlider({
+          ticker: true,
+          auto: true,
+          speed: '4000',
+          controls: false
+         });
+        });
+     </script>
+    
   </body>
 </html>
