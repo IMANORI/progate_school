@@ -5,15 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>0からWEBサイトを作ってみよう</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--スライダー -->
     <link href="jquery.bxslider.css" rel="stylesheet" />
-    
     <!-- スライダー -->
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body>
     <!-- ここから書き始めてください -->
@@ -173,6 +172,32 @@
         </li>
       </ul>
       </div>
+
+     <!-- Modal -->
+     <div class="modal-wrapper">
+      <div class="modal">
+        <div id="close-modal">
+          <i class="fa fa-2x fa-times"></i>
+        </div>
+        
+        <div id="apply-form">
+         <h2>各種コースお申し込み</h2>
+
+         <form action="#">
+           <select name="course">
+             <option value="short">短期集中２週間コース</option>
+             <option value="middle">通常１ヶ月コース</option>
+             <option value="long">土日開発２ヶ月コース</option>
+           </select>
+           <input class="form-control" type="text" placeholder="氏名">
+           <input class="form-control" type="text" placeholder="メールアドレス">
+           <textarea name="message" placeholder="志望理由"></textarea>
+           <div class="apply-show" id="submit-btn">確認画面へ</div>
+         </form>
+        </div>
+      </div><!-- modal -->
+     </div><!--modal-wrapper-->
+
     </div><!--container-->
   </div><!--priceing-section gray-section-->
   
@@ -183,7 +208,7 @@
         <h3>メンター紹介</h3>
       </div>
     
-    <div class="bxslider">
+    <div class="bxSlider">
       
       <div class="slide">
        <div class="mentor-box">
@@ -354,7 +379,7 @@
     </div>
   </div><!--container-->
 </div><!--social-section-->
-
+ 
 <!--footer-->
 <footer>
   <div class="container">
@@ -366,17 +391,19 @@
 <script type="text/javascript" src="script.js"></script>
 
     <!-- jQuery library (served from Google) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    
     <!-- bxSlider Javascript file -->
     <script src="jquery.bxslider.min.js"></script>
      <script type="text/javascript">
     
         $(document).ready(function(){
          $('.bxSlider').bxSlider({
-          ticker: true,
-          auto: true,
-          speed: '4000',
-          controls: false
+          
+          pause: 1000,
+          speed: 2500,
+          auto: true
+          
+
          });
         });
      </script>

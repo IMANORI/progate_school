@@ -250,6 +250,76 @@ header {
 .btn-pricing:hover {
   background: #384147;
 }
+
+/*モーダル*/
+.modal-wrapper {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6)
+}
+.modal {
+  position: absolute;
+  margin: auto;
+  width: 550px;
+  height: 500px;
+  background-color:  #ececec;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+}
+.fa-times {
+  float: right;
+  padding: 10px;
+}
+.modal h2 {
+  margin: 10px 0;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 36px;
+  padding: 20px;
+
+}
+
+#apply-form input,#apply-form textarea, select {
+  width: 380px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  padding: 10px 10px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+  display: inline;
+  padding: 10px 10px;
+}
+
+
+#apply-form textarea {
+  height: 100px;
+
+}
+
+select {
+  height: 40px;
+  width: 400px!important;
+  color: #555;
+}
+#submit-btn {
+  display: inline-block;
+  background-color: #5dca88;
+  display: inline-block;
+  padding: 14px 0;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+  width: 400px;
+}
+
+
+
 /*Mentors*/
 .mentors-section {
   text-align: center;
@@ -340,11 +410,16 @@ header {
 .contact-section h3,.contact-section h4 {
   color: #fff;
 }
+.contact-form {
+  display: inline-block;
+  width: 58%;
+  vertical-align: top;
+}
 .contact-section h4 {
   font-size: 22px;
   padding-bottom: 10px;
 }
-input,textarea {
+.contact-form input,.contact-form textarea {
   margin: 0;
   padding: 0 10px;
   vertical-align: middle;
@@ -360,14 +435,10 @@ input,textarea {
   margin-bottom: 20px;
   padding: 15px;
 }
-textarea {
+.contact-form textarea {
   height: 150px;
 }
-.contact-form {
-  display: inline-block;
-  width: 58%;
-  vertical-align: top;
-}
+
 .contact-about{
   display: inline-block;
   width: 40%;
@@ -402,13 +473,13 @@ textarea {
 .social-section h3 {
   font-weight: 300;
 }
+
 .social-icon {
   text-align: center;
   font-size: 36px;
   line-height: 76px;
-  color: #323A45;
+  color: #323A45 !important;
   padding: 5px;
-  
 }
 footer {
   text-align: center;
