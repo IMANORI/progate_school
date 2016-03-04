@@ -30,8 +30,24 @@ $(function() {
 	    $(this).find('.text-active').fadeOut(500);
 	   });
   
-    
-    //画像ZOOM
+    //コース申し込みモーダル表示
+
+      $('.btn-pricing').click(function() {
+       $('.modal-wrapper').fadeIn();
+
+      });
+
+　　　//モーダル非表示
+
+      $('#close-modal').click(function(){
+       $('.modal-wrapper').fadeOut();
+      });
+
+
+
+
+
+    //画像ZOOM NG
 
     　　$('.column-box').hover(
        function() {
@@ -42,7 +58,7 @@ $(function() {
          $(this).find('.column-box img').css('width','100%');
         });
 
-    //スライダー OK
+    //スライダー OK ２周目チラつきあり
 
     　　　$(document).ready(function(){
   　　　　　　$('.bxslider').bxSlider();

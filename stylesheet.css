@@ -259,11 +259,12 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6)
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
 }
 .modal {
-  position: absolute;
-  margin: auto;
+  
+  margin: 70px auto;
   width: 550px;
   height: 500px;
   background-color:  #ececec;
@@ -317,7 +318,9 @@ select {
   cursor: pointer;
   width: 400px;
 }
-
+#close-modal {
+  cursor: pointer;
+}
 
 
 /*Mentors*/
@@ -481,6 +484,10 @@ select {
   color: #323A45 !important;
   padding: 5px;
 }
+.social-icon:hover {
+  color: #0dc0c0!important;
+}
+
 footer {
   text-align: center;
   background: #222;
