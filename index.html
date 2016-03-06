@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>0からWEBサイトを作ってみよう</title>
-    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
     <link rel="stylesheet" href="stylesheet.css">
-    <!--スライダー -->
-    <link href="jquery.bxslider.css" rel="stylesheet" />
+    <!--スライダー Boostrap3-->
+    
     <!-- スライダー -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
@@ -184,7 +184,7 @@
          <h2>各種コースお申し込み</h2>
 
          <form action="#">
-           <select name="course">
+           <select id="couse-select" name="course">
              <option value="short">短期集中２週間コース</option>
              <option value="middle">通常１ヶ月コース</option>
              <option value="long">土日開発２ヶ月コース</option>
@@ -202,41 +202,47 @@
   </div><!--priceing-section gray-section-->
   
   <!--Mentors-->
-  <div class="mentors-section">
+  <div id="mentors" class="mentors-section">
     <div class="container">
       <div class="section-title">
         <h3>メンター紹介</h3>
       </div>
     
-    <div class="bxSlider">
+    <div id="mentor-carousel" class="carousel slide" data-ride="carousel" deta-interval="2500">
+     <!-- 中央に表示される丸いボタン -->
+     <ol class="carousel-indicators">
+      <li data-target="#mentor-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#mentor-carousel" data-slide-to="1" class=""></li>
+      <li data-target="#mentor-carousel" data-slide-to="2" class=""></li>
+     </ol>
       
-      <div class="slide">
-       <div class="mentor-box">
-        <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_1.jpg">
+      <div class="carousel-inner">
+       <div class="item mentor-box active">
+        <img class="mentor-image" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_1.jpg">
         <h4>プログラミングサークルでの活動や受託を通じてスキルを磨く。その後は複数のスタートアップに協力しながらプログラミングを教えるようになり、これをオンラインのサービスとして提供したいと思い、2014年7月に株式会社Progateを創業、現代表取締役。</h4>
         <p>-加藤将倫</p>
        </div>
-      </div>
+      
 
-      <div class="slide">
-       <div class="mentor-box">
-        <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_2.jpg">
+      
+       <div class="item mentor-box">
+        <img  class="mentor-image" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_2.jpg">
         <h4>３年生の秋にエンジニアを集めるために東大プログラミングサークル「ZEROXONE」をたちあげる。自分の人生はプログラミングを身につけたことによって劇的に変わりました。みんなにも同じ体験をしてもらいたくてProgateを作っています！</h4>
         <p>-村井謙太</p>
        </div>
-      </div>
+      
 
-      <div class="slide">
-       <div class="mentor-box">
-        <img src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_3.jpg">
+    
+       <div class="item mentor-box">
+        <img class="mentor-image" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/mentors/mentor_3.jpg">
         <h4>ProgateではUI/UXを担当。ユーザーに夢中で楽しんでもらえるようなサービス設計、学びによって人生を豊かにできるようなサービスを目指し、日々プロダクト改善に取り組んでいる。テクノロジー・デザイン・ビジネスの分野で、領域横断的に活動し、人々がワクワクして止まないモノを生み出せる人間で在りたいと思う。</h4>
         <p>-神田美智</p>
        </div>
-      </div>
-
-    </div>
       
-    </div>
+
+     </div><!--inner-->
+    </div><!--div id="carousel_sample" class="carousel slide" data-ride="carousel"-->
+   </div><!-- cantainer -->
   </div><!--mentors-section-->
   
   <!--Message-->
@@ -268,7 +274,8 @@
       <div class="column-box column">
         <a href="#" class="caption">
           <div class="caption-defaultWrap">
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/programmer.jpg">
+            
+            <div class="column-image zoom" style="bacKground-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/programmer.jpg")"></div>
           </div>
         </a>
         <a href="#" class="column-title">20代のエンジニアが初めての転職でつまずきやすい点</a>
@@ -278,7 +285,7 @@
       <div class="column-box tip">
         <a href="#" >
           <div>
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/html5.jpg">
+            <div class="column-image zoom" style="background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/html5.jpg")"></div>
           </div>
         </a>
         <a href="#" class="column-title">HTML5の新タグについて</a>
@@ -288,7 +295,7 @@
       <div class="column-box tip">
         <a href="#">
           <div>
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/js.jpg">
+            <div class="column-image zoom" style="background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/js.jpg")"></div>
           </div>
         </a>
         <a href="#" class="column-title">Javascriptの文法のまとめ</a>
@@ -298,7 +305,7 @@
       <div class="column-box column">
         <a href="#">
           <div>
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/books.jpg">
+            <div class="column-image zoom" style="background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/books.jpg")"></div>
           </div>
         </a>
         <a href="#" class="column-title">新卒ソフトウェアエンジニアのための技術書100冊</a>
@@ -308,7 +315,7 @@
       <div class="column-box column">
         <a href="#">
           <div>
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/engineer.jpg">
+            <div class="column-image zoom" style="background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/engineer.jpg")"></div>
           </div>
         </a>
         <a href="#" class="column-title">「プレイヤーでも年収1000万円に」エンジニアの評価制度</a>
@@ -318,17 +325,18 @@
       <div class="column-box tip">
         <a href="#">
           <div>
-            <img class="image-zoom" src="https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/inspect.jpg">
-          </div>
+            <div class="column-image zoom" style="background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/portfolio/inspect.jpg")"></div>
         </a>
-        <a href="#" class="column-title">要素の検証をしてみよう</a>
-        <div>HTML / CSS</div>
+             <a href="#" class="column-title">要素の検証をしてみよう</a>
+              <div>HTML / CSS</div>
+          </div>
       </div>
-    </div><!--container-->
+     </div><!--column-box column-->
     
-    <div class="btn btn-pricing">Load More</div>
+    <div class="Load-more">Load More</div>
   </div><!--wrapper-outer-->
-</div><!--column-section-->
+ </div><!--container-->
+</div><!--column-section gray-section-->
 
 <!--contact-->
 <div class="contact-section">
@@ -389,24 +397,9 @@
 
 
 <script type="text/javascript" src="script.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- Boostrap3 スライダー-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <!-- jQuery library (served from Google) -->
-    
-    <!-- bxSlider Javascript file -->
-    <script src="jquery.bxslider.min.js"></script>
-     <script type="text/javascript">
-    
-        $(document).ready(function(){
-         $('.bxSlider').bxSlider({
-          
-          pause: 1000,
-          speed: 2500,
-          auto: true
-          
-
-         });
-        });
-     </script>
-    
-  </body>
+ </body>
 </html>

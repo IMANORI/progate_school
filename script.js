@@ -1,28 +1,18 @@
 $(function() {
  
-	// スクロールコピペhttp://kyasper.com/jquery-tips/
+	// スクロール OK
       
-		   // #で始まるアンカーをクリックした場合に処理
-		   $('a[href^=#]').click(function() {
-		      // スクロールの速度
-		      var speed = 400; // ミリ秒
-		      // アンカーの値取得
-		      var href= $(this).attr("href");
-		      // 移動先を取得
-		      var target = $(href == "#" || href == "" ? 'html' : href);
-		      // 移動先を数値で取得
-		      var position = target.offset().top;
-		      // スムーススクロール
-		      $('body,html').animate({scrollTop:position}, speed, 'swing');
-		      return false;
-		   });
-		
+		  $('header a').click(function(){
+           $("html,body").animate({scrollTop:$($(this).attr('href')).offset().top},500);
+
+            
+		  });
        
 
 
 
 
-	//もっと詳しくボタンOK
+	//もっと詳しくボタン OK
 
 	  $('.btn-top-white').click(function() {
 	    if($('#read-more').hasClass('open')) {
@@ -36,7 +26,7 @@ $(function() {
 	    }
 	  });
 
-	//学習する言語OK
+	//学習する言語 OK
 		
 	  $('.language-box').hover(
 	  function() {
@@ -52,6 +42,11 @@ $(function() {
       $('.btn-pricing').click(function() {
        $('.modal-wrapper').fadeIn();
 
+        var id = $(this).parents('.price-column').attr('id');
+
+         $('#course-select').val(id);
+
+
       });
 
 　　　//モーダル非表示
@@ -65,21 +60,20 @@ $(function() {
 
 
     //画像ZOOM NG
+      
+    　
 
-    　　$('.column-box').hover(
-       function() {
-        $(this).find('.column-box img').css('width','300px').css('overflow','hidden');
-       },
-        
-        function() {
-         $(this).find('.column-box img').css('width','100%');
-        });
+    //スライダー OK 
+      
+      $('.carousel').carousel({
+      	interval:2500
+      })
 
-    //スライダー OK ２周目チラつきあり
 
-    　　　$(document).ready(function(){
-  　　　　　　$('.bxslider').bxSlider();
-        });
+
+    // 　　　$(document).ready(function(){
+    // 　　　　　　$('.bxslider').bxSlider();
+    // }); 
 
 
 }); //TOPのfanction
